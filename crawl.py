@@ -39,7 +39,7 @@ def do_job(params, filename):
     crawl_data(params,filename)
     save(filename)
 
-schedule.every(15).seconds.do(do_job, params = params, filename = time.ctime())
+schedule.every(15).seconds.do(do_job, params = params, filename = time.ctime()+'.csv')
 
 while True:
     schedule.run_pending()
