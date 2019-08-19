@@ -10,8 +10,8 @@ class DatabaseHandler:
     def __init__(self, mongo_url, mongo_db):
         self.mongo_url = mongo_url
         self.client = MongoClient(mongo_url)
-        print("Connected to Mongo")
         self.db = self.client[mongo_db]
+        print("Connected to Mongo")
 
     def insert(self, collection, obj):
         return self.db[collection].insert_one(obj)

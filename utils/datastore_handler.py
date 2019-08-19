@@ -46,5 +46,6 @@ class DataStoreHandler:
             print(err)
 
 
+
 Minio_Handler = DataStoreHandler(
     config.MINIO_URL, config.MINIO_ACCESS_KEY, config.MINIO_SECRET_KEY, config.MINIO_BUCKET)

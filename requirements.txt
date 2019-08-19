@@ -1,0 +1,4 @@
+schedule==0.6.0
+pymongo==3.9.0
+requests==2.22.0
+minio==4.0.20
