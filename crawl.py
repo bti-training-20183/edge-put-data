@@ -32,6 +32,7 @@ def save(filename):
         "filename" : filename,
         "file_uri" : to_path
     }
+    os.remove(filename)
     Database_Handler.insert(config.MONGO_COLLECTION, logs)
     
 def do_job(params, filename):
