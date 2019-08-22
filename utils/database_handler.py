@@ -10,8 +10,8 @@ class DatabaseHandler:
     def __init__(self, mongo_url, mongo_db):
         self.mongo_url = mongo_url
         self.client = MongoClient(mongo_url)
-        self.db = self.client[mongo_db]
         print("Connected to Mongo")
+        self.db = self.client[mongo_db]
 
     def insert(self, collection, obj):
         return self.db[collection].insert_one(obj)
@@ -34,7 +34,7 @@ class DatabaseHandler:
         return self.db[collection].find()
 
     def update(self, collection, query, new):
-        return self.db[collection].update_one(query, new)
+        return self.db[collection].update_one(query, {"$set": new}, upsert=True)
 
     def update_by_name(self, collection, name, new):
         return self.update(collection, {"name": name}, new)
