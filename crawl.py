@@ -46,7 +46,7 @@ def do_job(params, filename):
     save(filename)
 
 
-schedule.every(15).seconds.do(
+schedule.every(30).seconds.do(
     do_job, params=params, filename=time.strftime("%Y%m%d")+'.csv')
 
 while True:
