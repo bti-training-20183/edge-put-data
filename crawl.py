@@ -12,7 +12,7 @@ sys.path.append(os.getcwd())
 
 params = {
     "function": "TIME_SERIES_DAILY",
-    "symbol":  "MSFT",
+    "symbol":  "AAME",
     "apikey": config.API_KEY,
     "datatype": "csv"
 }
