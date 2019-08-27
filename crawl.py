@@ -24,7 +24,7 @@ def crawl_data(params, filename):
     with open(filename, 'w') as f:
         writer = csv.writer(f)
         for i, line in enumerate(response.iter_lines()):
-            if i == 61:
+            if i == 91:
                 break
             if i >= 1:
                 writer.writerow(line.decode('utf-8').split(',')[1:])
